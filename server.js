@@ -36,10 +36,10 @@ serverSocket.on('connect', function(socket){
     })
         
     socket.on('chat msg', function(msg){
-        serverSocket.emit('chat msg', `${socket.nickname} diz: ${msg}`)
+        serverSocket.emit('chat msg', `${msg}`)
     })
 
-    socket.on('status', function(msg){
+    socket.on(' ', function(msg){
         console.log(msg)
         socket.broadcast.emit('status', msg)
     })
