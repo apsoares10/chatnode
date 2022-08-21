@@ -17,8 +17,9 @@
                 var url = new URL(url_string);
                 var keyLoja = url.searchParams.get("keyLoja");
                 var KeyPedido = url.searchParams.get("KeyPedido");
-
-                var resultado = '{"keyLoja":"' + keyLoja + '","KeyPedido":"' + KeyPedido + '"}';
+                var Impressao = url.searchParams.get("Impressao");
+                
+                var resultado = '{"keyLoja":"' + keyLoja + '","KeyPedido":"' + KeyPedido + '","Impressao":"' + Impressao + '"}';
 
 
                 socket.emit('chat msg', resultado)
